@@ -2,7 +2,7 @@
 layout: single
 title: "IQ Test - Raven Matrices (Android Application"
 permalink: /raveniqapp/
-excerpt: "Architecture, data pipelines, indicator computation, machine learning integration, and execution logic of a real-time trading engine."
+excerpt: "Android Raven-style IQ test app."
 author_profile: true
 toc: true
 toc_label: "Contents"
