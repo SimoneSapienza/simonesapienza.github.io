@@ -59,3 +59,47 @@
   background-color: #181818;
   border-color: #333;
 }
+
+/* Force text to be solid black in light sections */
+.section-light,
+.section-light p,
+.section-light h1,
+.section-light h2,
+.section-light h3,
+.section-light h4,
+.section-light .archive__item-title,
+.section-light .archive__item-excerpt {
+  color: #111 !important;
+}
+
+/* Make cards in light sections have a white background */
+.section-light .archive__item {
+  background: #fff !important;
+  border-color: #ddd !important;
+}
+
+/* Improve section contrast */
+.section {
+  background: #ffffff;
+}
+
+.section-light {
+  background: #f2f2f2 !important;
+}
+
+/* Improve section-dark readability */
+.section-dark {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.section-dark .archive__item {
+  background: #181818 !important;
+  border-color: #333 !important;
+}
+
+.section-dark .archive__item-title,
+.section-dark .archive__item-excerpt {
+  color: #fff !important;
+}
+
