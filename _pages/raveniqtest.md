@@ -2,7 +2,7 @@
 ---
 layout: single
 title: "IQ Test – Raven Matrices (Android Application)"
-permalink: /raven-iq-test/
+permalink: /raveniqtest/
 excerpt: "Technical implementation, rendering engine, gameplay system, data storage, monetization modules and auxiliary services of an Android application based on Raven-style matrices."
 author_profile: true
 toc: true
