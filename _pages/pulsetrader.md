@@ -2,7 +2,7 @@
 layout: single
 title: "PulseTrader – Real-Time Trading Engine with ML Integration"
 permalink: /pulsetrader/
-excerpt: "Architecture, data pipelines, indicator computation, machine learning integration, and execution logic of a real-time trading engine."
+excerpt: "Android application based on Raven-style matrices."
 author_profile: true
 toc: true
 toc_label: "Contents"
