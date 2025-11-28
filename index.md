@@ -78,14 +78,18 @@ cta_row:
 
 {% include feature_row id="intro" type="center" %}
 
+<h2 id="projects">Projects</h2>
+
 {% include feature_row id="feature_row" %}
 
-## What I do
+<h2 id="whatido">What I Do</h2>
 
 {% include feature_row id="skills_row" %}
 
-## Highlights
+<h2 id="highlights">Highlights</h2>
 
 {% include feature_row id="highlights" %}
+
+<h2 id="contact">Contact</h2>
 
 {% include feature_row id="cta_row" type="center" %}
