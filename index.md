@@ -64,13 +64,15 @@ cta_row:
 ---
 
 <section class="section hero-section">
-  <h1>{{ page.title }}</h1>
-  <h3 class="hero-subtitle">{{ page.subtitle }}</h3>
-  <p class="lead">
-    I design and build real-time, data-driven systems — from algorithmic trading engines
-    to mobile and cloud applications. My work combines hands-on engineering with system
-    architecture, machine learning, and real-world production constraints.
-  </p>
+  <div class="section-inner hero-inner">
+    <h1>{{ page.title }}</h1>
+    <h3 class="hero-subtitle">{{ page.subtitle }}</h3>
+    <p class="lead">
+      I design and build real-time, data-driven systems — from algorithmic trading engines
+      to mobile and cloud applications. My work combines hands-on engineering with system
+      architecture, machine learning, and real-world production constraints.
+    </p>
+  </div>
 </section>
 
 <section class="section section-light" id="projects">
