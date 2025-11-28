@@ -3,113 +3,169 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base section layout */
+/* ========== SECTIONS BASE ========== */
 .section {
   padding: 4rem 0;
   background: #ffffff;
+  color: #111;
 }
 
 .section + .section {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Content width */
+/* Contenuto centrato e con larghezza decente */
 .section-inner {
-  max-width: 960px;
+  max-width: 1100px;   /* PIÙ LARGO di prima */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* Hero section */
+/* Titoli e testo nelle sezioni (di default NERI) */
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section p {
+  color: #111;
+}
+
+/* ========= HERO ========= */
+
 .hero-section {
-  text-align: center;
   padding-top: 6rem;
   padding-bottom: 4rem;
+  background: radial-gradient(circle at top left, #1d4ed8, #0b1120);
+  color: #fff;
 }
 
 .hero-inner {
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.hero-section h1,
+.hero-section h3,
+.hero-section p {
+  color: #fff;
 }
 
 .hero-section h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   font-weight: 400;
-  opacity: 0.85;
+  opacity: 0.9;
   margin-bottom: 1.5rem;
 }
 
 .hero-section .lead {
   font-size: 1.05rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* Light & dark sections */
+/* ========= LIGHT & DARK SECTIONS ========= */
+
 .section-light {
-  background: #f2f2f2 !important;
+  background: #f3f4f6 !important; /* grigio chiaro */
 }
 
-.section-dark {
-  background: #111 !important;
-  color: #fff !important;
-}
-
-.section-dark a {
-  color: #fff;
-}
-
-/* Headings & text */
-.section h2 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.6rem;
-}
-
-.section-intro {
-  max-width: 640px;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-/* Force readable text in light sections */
+/* Forziamo testo leggibile nelle light */
 .section-light,
 .section-light p,
 .section-light h1,
 .section-light h2,
 .section-light h3,
-.section-light h4,
-.section-light .archive__item-title,
-.section-light .archive__item-excerpt {
+.section-light h4 {
   color: #111 !important;
 }
 
-/* Cards (feature_row) */
+/* Sezione scura (Highlights) */
+.section-dark {
+  background: #111827 !important;
+  color: #fff !important;
+}
+
+.section-dark p,
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #fff !important;
+}
+
+/* ========= INTRO DEI BLOCCHI ========= */
+
+/* Ora l’intro può usare quasi tutta la larghezza della section-inner */
+.section-intro {
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  /* niente max-width -> usa tutta la larghezza */
+}
+
+/* ========= FEATURE ROW / CARDS ========= */
+
+/* Wrapper delle card (Projects, Skills, Highlights, ecc.) */
+.feature__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Ogni "item" (card) si comporta come una colonna flessibile */
+.feature__item {
+  flex: 1 1 300px; /* almeno 300px, poi si adatta */
+  display: flex;
+}
+
+/* Card base */
 .archive__item {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   border-radius: 6px;
   transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
+/* Hover effetto leggero */
 .archive__item:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
 }
 
-/* Cards in light sections */
-.section-light .archive__item {
-  background: #fff !important;
-  border-color: #ddd !important;
+/* Corpo della card riempie lo spazio -> altezza allineata tra le card */
+.archive__item-body {
+  flex: 1;
 }
 
-/* Cards in dark section */
+/* Titolo card */
+.archive__item-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Estratto card */
+.archive__item-excerpt {
+  margin-bottom: 0.75rem;
+}
+
+/* Card nelle sezioni chiare */
+.section-light .archive__item {
+  background: #ffffff !important;
+  border-color: #d1d5db !important;
+}
+
+/* Card nella sezione scura */
 .section-dark .archive__item {
-  background-color: #181818 !important;
-  border-color: #333 !important;
+  background-color: #111827 !important;
+  border-color: #374151 !important;
 }
 
 .section-dark .archive__item-title,
@@ -117,16 +173,18 @@ html {
   color: #fff !important;
 }
 
-/* Buttons */
+/* ========= BUTTONS ========= */
+
 .btn,
 .btn--primary {
   border-radius: 999px;
   font-weight: 500;
   padding: 0.45rem 1.4rem;
+  font-size: 0.95rem;
 }
 
 .btn--primary {
-  background-color: #2563eb; /* blu tipo Tailwind */
+  background-color: #2563eb;
   border-color: #2563eb;
   color: #fff !important;
 }
@@ -136,22 +194,28 @@ html {
   border-color: #1d4ed8;
 }
 
-/* Make sure nav bar stays minimal & clean if theme adds extras */
+/* ========= NAVBAR (leggera sistemata) ========= */
+
 .greedy-nav a {
   font-size: 0.95rem;
 }
 
-/* Slight spacing between sections on mobile */
+/* ========= RESPONSIVE ========= */
+
 @media (max-width: 768px) {
   .section {
     padding: 3rem 0;
   }
 
   .hero-section h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .hero-subtitle {
     font-size: 1.05rem;
+  }
+
+  .feature__wrapper {
+    gap: 1rem;
   }
 }
