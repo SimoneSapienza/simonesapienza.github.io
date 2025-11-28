@@ -1,7 +1,12 @@
 ---
 layout: single
-title: "Raven Test Simple"
+title: "IQ Test - Raven Matrices (Android Application"
 permalink: /raveniqapp/
+excerpt: "Architecture, data pipelines, indicator computation, machine learning integration, and execution logic of a real-time trading engine."
+author_profile: true
+toc: true
+toc_label: "Contents"
+toc_sticky: true
 ---
 
 This project is an Android application implementing **Raven-style cognitive matrices**, with:
