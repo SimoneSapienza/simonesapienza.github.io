@@ -17,7 +17,7 @@ feature_row:
     excerpt: >
       Android application implementing Raven’s Progressive Matrices–style IQ tests, with over 130,000 downloads
       on Google Play. Includes test logic, scoring, persistence, and a smooth UX optimized for mobile users.
-    url: "/raven-iq-test./"
+    url: "/raven-iq-test/"
     btn_label: "View project overview"
     btn_class: "btn--primary"
 
@@ -58,7 +58,7 @@ cta_row:
       I enjoy discussing complex systems: from market data streams and ML pipelines to mobile clients and field devices.
       If you’d like to talk about architecture, trading systems, or applied AI, feel free to reach out on LinkedIn
       or explore my work on GitHub.
-    url: "https://www.linkedin.com/in/simone-sapienza/"
+    url: "https://www.linkedin.com/in/simone-sapienza-091a04169/"
     btn_label: "Connect on LinkedIn"
     btn_class: "btn--primary"
 ---
