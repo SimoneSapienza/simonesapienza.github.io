@@ -3,16 +3,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ========== BASE SECTIONS ========== */
+/* ========= GLOBAL BACKGROUND ========= */
+body {
+  background: #020617; /* quasi nero blu */
+}
+
+/* ========= BASE SECTIONS ========= */
 
 .section {
   padding: 4rem 0;
-  background: #ffffff;
-  color: #111;
+  background: #020617;
+  color: #e5e7eb;
 }
 
 .section + .section {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #111827;
 }
 
 /* Contenuto centrato */
@@ -22,22 +27,26 @@ html {
   padding: 0 1.5rem;
 }
 
-/* Titoli e paragrafi di default: NERI (tranne nelle dark) */
+/* Titoli e testo nelle sezioni (default chiaro) */
 .section h1,
 .section h2,
 .section h3,
-.section h4,
-.section p {
-  color: #111;
+.section h4 {
+  color: #e5e7eb;
 }
 
-/* ========== HERO MINIMAL ========== */
+.section p,
+.section .section-intro {
+  color: #cbd5f5;
+}
+
+/* ========= HERO MINIMAL / TECH ========= */
 
 .hero-section {
   padding-top: 6rem;
   padding-bottom: 4rem;
-  background: #ffffff;       /* niente gradiente, bianco pulito */
-  border-bottom: 1px solid #e5e7eb;
+  background: #020617;              /* pieno dark */
+  border-bottom: 1px solid #111827;
 }
 
 .hero-inner {
@@ -54,135 +63,109 @@ html {
 .hero-subtitle {
   font-size: 1.2rem;
   font-weight: 400;
-  opacity: 0.9;
+  color: #9ca3af;                    /* grigio chiaro */
   margin-bottom: 1.5rem;
 }
 
 .hero-section .lead {
   font-size: 1.05rem;
-  opacity: 0.9;
+  color: #e5e7eb;
+  opacity: 0.95;
 }
 
-/* assicuriamo che TUTTO il testo del hero sia scuro */
-.hero-section,
-.hero-section h1,
-.hero-section h3,
-.hero-section p {
-  color: #111 !important;
-}
+/* ========= LIGHT & DARK VARIANTI ========= */
 
-/* ========== LIGHT & DARK SECTIONS ========== */
-
+/* Sezione leggermente più chiara (Projects, Contact) */
 .section-light {
-  background: #f3f4f6 !important; /* grigio chiaro */
+  background: #0b1120;               /* blu/grigio scuro */
 }
 
-/* testo leggibile nelle sezioni chiare */
-.section-light,
-.section-light p,
-.section-light h1,
-.section-light h2,
-.section-light h3,
-.section-light h4 {
-  color: #111 !important;
-}
-
-/* sezione scura (Highlights) */
+/* Sezione "Highlights" – stessa base, ma la differenziamo con bordo più marcato */
 .section-dark {
-  background: #111827 !important;
-  color: #fff !important;
+  background: #020617;
+  border-top: 1px solid #1d2735;
 }
 
-.section-dark p,
-.section-dark h1,
-.section-dark h2,
-.section-dark h3,
-.section-dark h4 {
-  color: #fff !important;
+/* All'interno delle sezioni NON vogliamo mai testo nero */
+.section,
+.section p,
+.section h1,
+.section h2,
+.section h3,
+.section h4 {
+  color: #e5e7eb;
 }
 
-/* testo NERO in tutte le sezioni NON dark */
-.section:not(.section-dark) p,
-.section:not(.section-dark) .section-intro,
-.section:not(.section-dark) .archive__item-excerpt {
-  color: #111 !important;
-}
-
-/* ========== INTRO DELLE SEZIONI ========== */
-
+/* Le intro hanno un po' più di respiro e tono più soft */
 .section-intro {
   margin-bottom: 2rem;
   opacity: 0.9;
-  /* niente max-width -> usa tutta la larghezza della section-inner */
 }
 
-/* ========== FEATURE ROW / CARDS ========== */
+/* ========= FEATURE ROW / CARDS ========= */
 
+/* Wrapper delle card */
 .feature__wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
 
-/* wrapper per una card */
+/* Ogni elemento della feature_row */
 .feature__item {
   flex: 1 1 300px;
   display: flex;
 }
 
-/* card base */
+/* Card base */
 .archive__item {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 6px;
-  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: #020617;
+  border: 1px solid #1f2933;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
   width: 100%;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s ease-out;
 }
 
-/* body della card riempie lo spazio -> altezza allineata */
+/* Corpo della card riempie lo spazio -> altezze coerenti */
 .archive__item-body {
   flex: 1;
 }
 
-/* titolo card */
+/* Titolo card */
 .archive__item-title {
   font-size: 1.05rem;
   margin-bottom: 0.25rem;
-  color: #111;
+  color: #e5e7eb;
 }
 
-/* descrizione card (excerpt) – NERA nelle sezioni non dark */
+/* Testo delle card – sempre chiaro (tranne override per dark se servisse) */
 .archive__item-excerpt {
   margin-bottom: 0.75rem;
+  color: #cbd5f5;
 }
 
-/* hover leggero */
+/* Hover effetto leggero */
 .archive__item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+  border-color: #2563eb;
 }
 
-/* card nelle sezioni chiare */
+/* Nelle sezioni "light" manteniamo lo stesso stile dark ma con bordo leggermente più chiaro */
 .section-light .archive__item {
-  background: #ffffff !important;
-  border-color: #d1d5db !important;
+  border-color: #273549;
 }
 
-/* card nella sezione scura */
+/* In Highlights (section-dark) manteniamo lo stesso schema colore */
 .section-dark .archive__item {
-  background-color: #111827 !important;
-  border-color: #374151 !important;
+  background: #020617;
+  border-color: #1f2933;
 }
 
-.section-dark .archive__item-title,
-.section-dark .archive__item-excerpt {
-  color: #fff !important;
-}
-
-/* ========== BUTTONS ========== */
+/* ========= BUTTONS ========= */
 
 .btn,
 .btn--primary {
@@ -203,13 +186,18 @@ html {
   border-color: #1d4ed8;
 }
 
-/* ========== NAVBAR ========== */
+/* ========= NAVBAR ========= */
+
+.greedy-nav {
+  background: #020617;
+  border-bottom: 1px solid #111827;
+}
 
 .greedy-nav a {
   font-size: 0.95rem;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========= RESPONSIVE ========= */
 
 @media (max-width: 768px) {
   .section {
