@@ -17,8 +17,8 @@ feature_row:
     excerpt: >
       Android application implementing Raven’s Progressive Matrices–style IQ tests, with over 130,000 downloads
       on Google Play. Includes test logic, scoring, persistence, and a smooth UX optimized for mobile users.
-    url: "https://play.google.com" # replace with your real Play Store link
-    btn_label: "View on Google Play"
+    url: "/raven-iq-test./"
+    btn_label: "View project overview"
     btn_class: "btn--primary"
 
 # SKILLS / EXPERTISE
