@@ -2,10 +2,8 @@
   padding: 4rem 0;
 }
 
-.hero-section {
-  text-align: center;
-  padding-top: 6rem;
-  padding-bottom: 4rem;
+.section + .section {
+  border-top: 1px solid #e0e0e0;
 }
 
 .section-light {
@@ -17,6 +15,47 @@
   color: #fff;
 }
 
+.section-dark a {
+  color: #fff;
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.hero-section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
 .section h2 {
   margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.section-intro {
+  max-width: 640px;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* optional: slightly tweak cards in dark section */
+.section-dark .archive__item {
+  background-color: #181818;
+  border-color: #333;
 }
