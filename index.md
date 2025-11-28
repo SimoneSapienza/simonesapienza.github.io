@@ -8,18 +8,14 @@ author_profile: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/overlay.jpg # opzionale, puoi cambiarla o rimuoverla
+  overlay_image: /assets/images/overlay.jpg # optional, you can change or remove this
   actions:
     - label: "View GitHub"
       url: "https://github.com/simonesapienza"
     - label: "View LinkedIn"
       url: "https://www.linkedin.com/in/simone-sapienza/"
 
-intro:
-  - excerpt: >
-      I design and build real-time, data-driven systems — from algorithmic trading engines to mobile and cloud applications.
-      My work combines hands-on engineering with system architecture, machine learning, and production constraints.
-
+# FEATURED PROJECTS
 feature_row:
   - title: "PulseTrader – AI-Driven Crypto Trading Engine"
     excerpt: >
@@ -37,6 +33,7 @@ feature_row:
     btn_label: "View on Google Play"
     btn_class: "btn--primary"
 
+# SKILLS / EXPERTISE
 skills_row:
   - title: "Cloud & Backend Engineering"
     excerpt: >
@@ -51,6 +48,7 @@ skills_row:
       Developing mobile apps (Android, Xamarin, .NET MAUI) that interact with sensors, Bluetooth LE devices,
       and real-world industrial workflows.
 
+# HIGHLIGHTS
 highlights:
   - title: "Experience & Focus"
     excerpt: >
@@ -65,6 +63,7 @@ highlights:
       .NET, C#, Python, Java, Android, .NET MAUI, WebSockets, REST APIs, MySQL, InfluxDB, Docker, Git, CI/CD,
       XGBoost, LSTM, time-series modeling, technical indicators, and data pipelines.
 
+# CALL TO ACTION
 cta_row:
   - title: "Let’s talk about real-time systems, AI, and architecture"
     excerpt: >
@@ -76,20 +75,45 @@ cta_row:
     btn_class: "btn--primary"
 ---
 
-{% include feature_row id="intro" type="center" %}
+<p class="lead">
+  I design and build real-time, data-driven systems — from algorithmic trading engines to mobile and cloud applications.
+  My work combines hands-on engineering with system architecture, machine learning, and production constraints.
+</p>
+
+<hr />
 
 <h2 id="projects">Projects</h2>
+<p>
+  A selection of projects that best represent the way I work in terms of architecture, scalability, and real-world impact.
+</p>
 
 {% include feature_row id="feature_row" %}
 
+<hr />
+
 <h2 id="whatido">What I Do</h2>
+<p>
+  I work across the full stack of data-intensive systems: from real-time data ingestion and ML-driven decision engines
+  to mobile clients and industrial field applications.
+</p>
 
 {% include feature_row id="skills_row" %}
 
+<hr />
+
 <h2 id="highlights">Highlights</h2>
+<p>
+  A quick overview of my experience, the types of systems I build, and the technologies I’m most comfortable with.
+</p>
 
 {% include feature_row id="highlights" %}
 
+<hr />
+
 <h2 id="contact">Contact</h2>
+<p>
+  I’m always interested in technical conversations around real-time architectures, trading systems, and applied AI.
+  Feel free to connect on LinkedIn or explore my work on GitHub.
+</p>
 
 {% include feature_row id="cta_row" type="center" %}
