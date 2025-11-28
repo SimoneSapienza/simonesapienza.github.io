@@ -1,34 +1,35 @@
+/* Smooth scroll for nav links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base section layout */
 .section {
   padding: 4rem 0;
+  background: #ffffff;
 }
 
 .section + .section {
   border-top: 1px solid #e0e0e0;
 }
 
-.section-light {
-  background: #f7f7f7;
-}
-
-.section-dark {
-  background: #111;
-  color: #fff;
-}
-
-.section-dark a {
-  color: #fff;
-}
-
+/* Content width */
 .section-inner {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
+/* Hero section */
 .hero-section {
   text-align: center;
   padding-top: 6rem;
   padding-bottom: 4rem;
+}
+
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .hero-section h1 {
@@ -43,9 +44,30 @@
   margin-bottom: 1.5rem;
 }
 
+.hero-section .lead {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* Light & dark sections */
+.section-light {
+  background: #f2f2f2 !important;
+}
+
+.section-dark {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.section-dark a {
+  color: #fff;
+}
+
+/* Headings & text */
 .section h2 {
   margin-top: 0;
   margin-bottom: 0.75rem;
+  font-size: 1.6rem;
 }
 
 .section-intro {
@@ -54,13 +76,7 @@
   opacity: 0.9;
 }
 
-/* optional: slightly tweak cards in dark section */
-.section-dark .archive__item {
-  background-color: #181818;
-  border-color: #333;
-}
-
-/* Force text to be solid black in light sections */
+/* Force readable text in light sections */
 .section-light,
 .section-light p,
 .section-light h1,
@@ -72,29 +88,27 @@
   color: #111 !important;
 }
 
-/* Make cards in light sections have a white background */
+/* Cards (feature_row) */
+.archive__item {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* Cards in light sections */
 .section-light .archive__item {
   background: #fff !important;
   border-color: #ddd !important;
 }
 
-/* Improve section contrast */
-.section {
-  background: #ffffff;
-}
-
-.section-light {
-  background: #f2f2f2 !important;
-}
-
-/* Improve section-dark readability */
-.section-dark {
-  background: #111 !important;
-  color: #fff !important;
-}
-
+/* Cards in dark section */
 .section-dark .archive__item {
-  background: #181818 !important;
+  background-color: #181818 !important;
   border-color: #333 !important;
 }
 
@@ -103,3 +117,41 @@
   color: #fff !important;
 }
 
+/* Buttons */
+.btn,
+.btn--primary {
+  border-radius: 999px;
+  font-weight: 500;
+  padding: 0.45rem 1.4rem;
+}
+
+.btn--primary {
+  background-color: #2563eb; /* blu tipo Tailwind */
+  border-color: #2563eb;
+  color: #fff !important;
+}
+
+.btn--primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* Make sure nav bar stays minimal & clean if theme adds extras */
+.greedy-nav a {
+  font-size: 0.95rem;
+}
+
+/* Slight spacing between sections on mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+}
