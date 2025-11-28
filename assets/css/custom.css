@@ -1,0 +1,22 @@
+.section {
+  padding: 4rem 0;
+}
+
+.hero-section {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.section-light {
+  background: #f7f7f7;
+}
+
+.section-dark {
+  background: #111;
+  color: #fff;
+}
+
+.section h2 {
+  margin-top: 0;
+}
